@@ -63,7 +63,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".my-logo {\n    margin-right: 0.375rem;\n}\n.sidenav-top {\n    width: 100%;\n    padding: 1rem;\n    height: 10rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx1QkFBdUI7Q0FDMUI7QUFDRDtJQUNJLFlBQVk7SUFDWixjQUFjO0lBQ2QsY0FBYztDQUNqQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm15LWxvZ28ge1xuICAgIG1hcmdpbi1yaWdodDogMC4zNzVyZW07XG59XG4uc2lkZW5hdi10b3Age1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHBhZGRpbmc6IDFyZW07XG4gICAgaGVpZ2h0OiAxMHJlbTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -74,7 +74,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"main-container\">\n  \n  <!--  -->\n  <div class=\"alert alert-app-level\">\n      \n  </div>\n  \n  <!--  -->\n  <header class=\"header header-6\">\n    <div class=\"branding\">\n      <a href=\"...\" class=\"nav-link\">\n          <img class=\"my-logo\" alt=\"Customer Portal Logo\" src=\"../assets/bolt2.png\">\n          <span class=\"title\">Customer Portal App</span>\n      </a>\n    </div>\n    <div class=\"header-actions\">\n      <clr-dropdown>\n        <button class=\"nav-icon\" clrDropdownTrigger>\n          <clr-icon shape=\"user\"></clr-icon>\n          <clr-icon shape=\"caret down\"></clr-icon>\n        </button>\n        <clr-dropdown-menu *clrIfOpen clrPosition=\"bottom-right\">\n          <a href=\"...\" clrDropdownItem>About</a>\n          <a href=\"...\" clrDropdownItem>Preferences</a>\n          <div class=\"dropdown-divider\"></div>\n          <a href=\"...\" clrDropdownItem>Log out</a>\n        </clr-dropdown-menu>\n      </clr-dropdown>\n    </div>\n  </header>\n  \n  <!--  -->\n  <div class=\"content-container\">\n      \n    <div class=\"content-area\">\n      <p>the main content here</p>\n      <router-outlet></router-outlet>\n    </div>\n      \n    <nav class=\"sidenav\">\n\n      <section class=\"sidenav-top\">\n        <div>gravatar and name here</div>\n      </section>\n\n      <section class=\"sidenav-content\">\n        <a href=\"...\" class=\"nav-link active\"><clr-icon shape=\"list\"></clr-icon>  Contracts</a>\n        <a href=\"...\" class=\"nav-link\"><clr-icon shape=\"bank\"></clr-icon>  Banking Details</a>\n        <a href=\"...\" class=\"nav-link\"><clr-icon shape=\"details\"></clr-icon>  Personal Details</a>\n        <a href=\"...\" class=\"nav-link\"><clr-icon shape=\"memory\"></clr-icon>  Meter Readings</a>\n        <a href=\"...\" class=\"nav-link\"><clr-icon shape=\"envelope\"></clr-icon>  Mail</a>\n        <a href=\"...\" class=\"nav-link\"><clr-icon shape=\"help\"></clr-icon>  Support</a>\n        <a href=\"...\" class=\"nav-link\"><clr-icon shape=\"book\"></clr-icon>  Knowledge Base</a>\n        <a href=\"...\" class=\"nav-link\"><clr-icon shape=\"file\"></clr-icon>  All Documents</a>\n      </section>\n\n    </nav>\n\n  </div>\n\n</div>\n\n\n"
 
 /***/ }),
 
@@ -125,6 +125,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _clr_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @clr/angular */ "./node_modules/@clr/angular/fesm5/clr-angular.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+
+
 
 
 
@@ -140,7 +144,9 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
+                _clr_angular__WEBPACK_IMPORTED_MODULE_5__["ClarityModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_6__["BrowserAnimationsModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
