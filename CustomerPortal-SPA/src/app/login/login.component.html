@@ -1,0 +1,41 @@
+<div class="login-card">
+  <div class="row">
+    <div class="col-lg-5 col-md-8 col-sm-12 col-xs-12">
+        <div class="card">
+            
+          <div class="card-header">
+            <div class="header-title">Login</div>
+            <div class="header-subtitle">Please login with your credentials</div>
+          </div>
+          
+          <div class="card-block">
+            <div class="card-text">
+              <form clrForm clrLayout="vertical" #loginForm="ngForm" id="loginForm">
+                
+                <clr-input-container>
+                  <label>Email</label>
+                  <input clrInput type="email" [(ngModel)]="model.email" name="email" #email="ngModel" required/>
+                  <clr-control-helper>Please enter your email address</clr-control-helper>
+                  <clr-control-error *clrIfError="'required'">Email is <strong>required</strong></clr-control-error>
+                </clr-input-container>
+
+                <clr-input-container>
+                  <label>Password</label>
+                  <input clrInput type="password" [(ngModel)]="model.password" name="password" #password="ngModel" required minlength="8"/>
+                  <clr-control-helper>Please enter your passsword</clr-control-helper>
+                  <clr-control-error *clrIfError="'required'">Password is <strong>required</strong></clr-control-error>
+                  <clr-control-error *clrIfError="'minlength'">Password must be at least 8 chracters long</clr-control-error>
+                </clr-input-container>
+
+            </form>
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <button class="btn btn-primary" form="loginForm" (click)="login()" [disabled]="!loginForm.valid">Login</button>
+          </div>
+
+        </div>
+    </div>
+  </div>
+</div>

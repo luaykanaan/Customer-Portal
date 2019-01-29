@@ -1,4 +1,5 @@
 using System;
+using CustomerPortal.API.Helpers;
 
 namespace CustomerPortal.API.Models
 {
@@ -21,6 +22,8 @@ namespace CustomerPortal.API.Models
         public int ReadingAtEnd { get; set; }
 
         public int ActualConsumption { get; set; }
+
+        public SpanStatus SpanStatus { get; set; }
 
         //# forign key
         public string ContractId { get; set; }

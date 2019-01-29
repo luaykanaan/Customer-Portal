@@ -64,6 +64,7 @@ namespace CustomerPortal.API.Controllers
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id), //nameidentifier for id
                 new Claim(ClaimTypes.Name, user.KnownAs), //name for knownAs
+                new Claim(ClaimTypes.Email, user.Email), // email for Email
             };
 
             var roles = await _userManager.GetRolesAsync(user);

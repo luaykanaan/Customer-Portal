@@ -119,9 +119,6 @@ namespace CustomerPortal.API
 
             app.UseAuthentication();
 
-            app.UseSwagger();
-            app.UseSwaggerUI(options => { options.SwaggerEndpoint("/swagger/v1/swagger.json", "Fantacy Trading API"); });
-
             app.UseMvc(routes => { routes.MapSpaFallbackRoute( name: "spa-fallback", defaults: new { controller = "Fallback", action = "Index"} ); } );
         }
     }

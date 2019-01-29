@@ -14,7 +14,7 @@
           <span class="title">Customer Portal</span>
       </a>
     </div>
-    <div class="header-actions">
+    <div class="header-actions" *ngIf="isLoggedIn">
       <clr-dropdown>
         <button class="nav-icon" clrDropdownTrigger>
           <clr-icon shape="user"></clr-icon>
@@ -32,13 +32,15 @@
   
   <!--  -->
   <div class="content-container">
+
+    <app-login *ngIf="!isLoggedIn"></app-login>
       
-    <div class="content-area">
+    <div class="content-area" *ngIf="isLoggedIn">
       <p>the main content here</p>
       <router-outlet></router-outlet>
     </div>
       
-    <nav class="sidenav">
+    <nav class="sidenav" *ngIf="isLoggedIn">
 
       <section class="sidenav-top">
         <div>gravatar and name here</div>

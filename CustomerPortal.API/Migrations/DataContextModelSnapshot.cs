@@ -136,6 +136,8 @@ namespace CustomerPortal.API.Migrations
 
                     b.Property<int>("ReadingAtStart");
 
+                    b.Property<int>("SpanStatus");
+
                     b.Property<DateTime>("StartDate");
 
                     b.HasKey("Id");
