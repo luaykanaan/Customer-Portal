@@ -1,0 +1,28 @@
+<header class="header header-6">
+    
+    <div class="branding">
+        <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="nav-link">
+            <img class="my-logo" alt="Customer Portal Logo" src="../assets/bolt2.png">
+            <span class="title">Customer Portal</span>
+        </a>
+    </div>
+        
+    <div class="header-actions" *ngIf="isLoggedIn">
+        <clr-dropdown>
+            <button class="nav-icon" clrDropdownTrigger>
+                <clr-icon shape="user"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+                <a href="..." clrDropdownItem>About</a>
+                <a href="..." clrDropdownItem>Preferences</a>
+                <div class="dropdown-divider"></div>
+                <a href="..." clrDropdownItem>Log out</a>
+            </clr-dropdown-menu>
+        </clr-dropdown>
+    </div>
+
+</header>
+
+
+    

@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  isLoggedIn: boolean;
-
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
@@ -18,8 +16,5 @@ export class AppComponent implements OnInit {
 
   doInitialChecks() {
     this.authService.checkLoginStatus();
-    this.authService.isLoggedIn$.subscribe(value => {
-      this.isLoggedIn = value;
-    });
   }
 }

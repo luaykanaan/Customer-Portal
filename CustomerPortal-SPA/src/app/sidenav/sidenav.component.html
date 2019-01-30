@@ -1,0 +1,27 @@
+
+  <section class="sidenav-top" *ngIf="isLoggedIn">
+    <ngx-avatar class="custom-avatar" gravatarId="{{loggedInUser.email}}" name="{{loggedInUser.knownAs}}" size="80"></ngx-avatar>
+    <div class="displayed-sidenav-name">{{loggedInUser.knownAs}}</div>
+  </section>
+
+  <section class="sidenav-content" *ngIf="isLoggedIn && isCustomer">
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="list"></clr-icon>  Contracts</a>
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="bank"></clr-icon>  Banking Details</a>
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="details"></clr-icon>  Personal Details</a>
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="memory"></clr-icon>  Meter Readings</a>
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="envelope"></clr-icon>  Mail</a>
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="help"></clr-icon>  Support</a>
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="book"></clr-icon>  Knowledge Base</a>
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="file"></clr-icon>  All Documents</a>
+  </section>
+
+  <section class="sidenav-content" *ngIf="isLoggedIn && isAdmin">
+    <a [routerLink]="['/customers']" routerLinkActive="active"  class="nav-link"><clr-icon shape="users" class="is-solid"></clr-icon>  Customers</a>
+    <a [routerLink]="['/employees']" routerLinkActive="active"  class="nav-link"><clr-icon shape="users"></clr-icon>  Employees</a>
+  </section>
+
+  <section class="sidenav-content" *ngIf="isLoggedIn && isSupport">
+    <a [routerLink]="['/']" routerLinkActive="active" class="nav-link"><clr-icon shape="envelope"></clr-icon>  Mail</a>
+  </section>
+
+ 

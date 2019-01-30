@@ -1,0 +1,17 @@
+.sidenav-top {
+    width: 100%;
+    padding: 1rem;
+    height: 10rem;
+    text-align: center;
+}
+
+.displayed-sidenav-name {
+    margin-top: 1em;
+}
+
+.custom-avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
