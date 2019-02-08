@@ -10,12 +10,13 @@ export interface User {
     lastName?: string;
     gender?: string;
     email?: string;
+    password?: string;
     DateCreated?: Date;
     lastActive?: Date;
     referenceNumber?: string;
     knownAs?: string;
     userType?: UserType;
-    roles?: string[];
+    role?: string;
     address?: Address;
     bank?: Bank;
     meter?: Meter;

@@ -1,4 +1,5 @@
 using AutoMapper;
+using CustomerPortal.API.Models;
 
 namespace CustomerPortal.API.Dtos
 {
@@ -7,7 +8,7 @@ namespace CustomerPortal.API.Dtos
 
         public MappingProfiles()
         {
-            
+            CreateMap<DtoIncomingCustomerAdd, User>();
         }
         
     }

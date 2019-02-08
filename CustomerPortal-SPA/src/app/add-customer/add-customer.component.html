@@ -1,0 +1,83 @@
+<form clrForm #addCustomerForm="ngForm">
+
+  <section>
+    <h4>Personal Details</h4>
+    <clr-input-container>
+      <label>Reference Number</label>
+      <input clrInput type="text" [(ngModel)]="customer.referenceNumber" name="referenceNumber" required/>
+    </clr-input-container>
+    <clr-input-container>
+      <label>First Name</label>
+      <input clrInput type="text" [(ngModel)]="customer.firstName" name="firstName" required/>
+    </clr-input-container>
+    <clr-input-container>
+      <label>Last Name</label>
+      <input clrInput type="text" [(ngModel)]="customer.lastName" name="lastName" required/>
+    </clr-input-container>
+    <clr-input-container>
+      <label>Email</label>
+      <input clrInput type="text" [(ngModel)]="customer.email" name="email" required/>
+    </clr-input-container>
+  </section>
+
+  <section class="mt-2">
+    <h4>Address</h4>
+    <clr-input-container>
+      <label>Street</label>
+      <input clrInput type="text" [(ngModel)]="address.street" name="street" required/>
+    </clr-input-container>
+    <clr-input-container>
+      <label>House Number</label>
+      <input clrInput type="text" [(ngModel)]="address.houseNumber" name="houseNumber" required/>
+    </clr-input-container>
+    <clr-input-container>
+      <label>Post code</label>
+      <input clrInput type="text" [(ngModel)]="address.postCode" name="postCode" required/>
+    </clr-input-container>
+    <clr-input-container>
+      <label>City</label>
+      <input clrInput type="text" [(ngModel)]="address.city" name="city" required/>
+    </clr-input-container>
+  </section>
+
+  <section class="mt-2">
+    <h4>Banking Details</h4>
+    <clr-input-container>
+      <label>Bank Name</label>
+      <input clrInput type="text" [(ngModel)]="bank.name" name="bankName" required/>
+    </clr-input-container>
+    <clr-input-container>
+      <label>IBAN</label>
+      <input clrInput type="text" [(ngModel)]="bank.iban" name="iban" required/>
+    </clr-input-container>
+  </section>
+
+  <section class="mt-2">
+    <h4>Contract Details</h4>
+    <clr-input-container>
+      <label>Contract Number</label>
+      <input clrInput type="text" [(ngModel)]="contract.contractNumber" name="contractNumber" required/>
+    </clr-input-container>
+    <clr-date-container>
+      <label class="pl-0">Start Date</label>
+      <input type="date" clrDate [(ngModel)]="startDate" name="spanStartDate" class="pl-0" (clrDateChange)="updateEndDate($event)" required>
+    </clr-date-container>
+    <clr-date-container>
+      <label class="pl-0">End Date</label>
+      <input type="date" clrDate [(clrDate)]="endDate" name="spanEndDate" class="pl-0" required>
+    </clr-date-container>
+    <clr-input-container>
+      <label>Estimated Yearly KWH Consumption</label>
+      <input clrInput type="number" [(ngModel)]="span.estimatedConsumption" name="spanEstimatedConsumption" required/>
+    </clr-input-container>
+    <clr-input-container>
+      <label>KWH Rate</label>
+      <input clrInput type="number" [(ngModel)]="span.kwhRate" name="spanKwhRate" required/>
+    </clr-input-container>
+  </section>
+
+  <section class="mt-2">
+    <button class="btn btn-primary" type="submit" (click)="addCustomer()" [disabled]="!addCustomerForm.valid">Add</button>
+  </section>
+
+</form>

@@ -38,7 +38,7 @@ namespace CustomerPortal.API.Context
                 var defaultPassword = "Pa55w0rd!";
 
                 // seed important users
-                var adminUser =  new User { ReferenceNumber = "E111AE0001", UserType = UserType.Employee, KnownAs = "Admin Employee (Admin)", Email = adminEmail, UserName = "AdminEmployee" };
+                var adminUser =  new User { ReferenceNumber = "E111AE0001", UserType = UserType.Employee, KnownAs = "Admin Employee", Email = adminEmail, UserName = "AdminEmployee" };
                 var result = _userManager.CreateAsync(adminUser, defaultPassword).Result; //do it like this because we can't add await
                 if (result.Succeeded)
                 {

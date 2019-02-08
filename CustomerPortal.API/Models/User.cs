@@ -24,7 +24,7 @@ namespace CustomerPortal.API.Models
 
         public string KnownAs { get; set; } // if customer: will be (salutation based on gender) + (first name) + (last name) //\\ if employee: (first name) + (last name) + ((role))
 
-        public ICollection<IdentityRole> Roles { get; set; }
+        public IdentityRole Role { get; set; }
 
         //# address
         public Address Address { get; set; }

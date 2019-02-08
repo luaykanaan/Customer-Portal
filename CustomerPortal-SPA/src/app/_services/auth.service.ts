@@ -18,15 +18,15 @@ export class AuthService {
   public isLoggedIn$: Observable<boolean>;
   private _loggedInUserBasicInfoSubject: BehaviorSubject<User>;
   public loggedInUserBasicInfo$: Observable<User>;
-  private _undecodedTokenSubject: BehaviorSubject<User>;
-  public undecodedToken$: Observable<User>;
+  private _undecodedTokenSubject: BehaviorSubject<any>;
+  public undecodedToken$: Observable<any>;
 
   constructor(private http: HttpClient) {
     this._isLoggedInSubject = new BehaviorSubject<boolean>(false);
     this.isLoggedIn$ = this._isLoggedInSubject.asObservable();
     this._loggedInUserBasicInfoSubject = new BehaviorSubject<User>({});
     this.loggedInUserBasicInfo$ = this._loggedInUserBasicInfoSubject.asObservable();
-    this._undecodedTokenSubject = new BehaviorSubject<User>({});
+    this._undecodedTokenSubject = new BehaviorSubject<any>({});
     this.undecodedToken$ = this._undecodedTokenSubject.asObservable();
    }
 
@@ -59,7 +59,7 @@ export class AuthService {
   setLoggedInUserBasicInfo(token: any) {
     this._undecodedTokenSubject.next(token);
     const dt = this._jwtHelper.decodeToken(token);
-    const user: User = { id: dt.nameid, knownAs: dt.unique_name, roles: dt.role, email: dt.email };
+    const user: User = { id: dt.nameid, knownAs: dt.unique_name, role: dt.role, email: dt.email };
     this._loggedInUserBasicInfoSubject.next(user);
   }
 

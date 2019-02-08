@@ -26,13 +26,13 @@ export class SidenavComponent implements OnInit {
     this.authService.loggedInUserBasicInfo$.subscribe(value => {
       this.loggedInUser = value;
       if (!(Object.keys(value).length === 0 && value.constructor === Object)) {
-        if (value.roles.includes('Admin')) {
+        if (value.role === 'Admin') {
           this.isAdmin = true;
         }
-        if (value.roles.includes('Support')) {
+        if (value.role === 'Support') {
           this.isSupport = true;
         }
-        if (value.roles.includes('Customer')) {
+        if (value.role === 'Customer') {
           this.isCustomer = true;
         }
       }

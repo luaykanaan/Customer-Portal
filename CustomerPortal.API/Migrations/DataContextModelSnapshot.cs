@@ -192,6 +192,8 @@ namespace CustomerPortal.API.Migrations
 
                     b.Property<string>("ReferenceNumber");
 
+                    b.Property<string>("RoleId");
+
                     b.Property<string>("SecurityStamp");
 
                     b.Property<bool>("TwoFactorEnabled");
@@ -210,6 +212,8 @@ namespace CustomerPortal.API.Migrations
                         .IsUnique()
                         .HasName("UserNameIndex");
 
+                    b.HasIndex("RoleId");
+
                     b.ToTable("AspNetUsers");
                 });
 
@@ -227,15 +231,11 @@ namespace CustomerPortal.API.Migrations
                     b.Property<string>("NormalizedName")
                         .HasMaxLength(256);
 
-                    b.Property<string>("UserId");
-
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
                         .HasName("RoleNameIndex");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("AspNetRoles");
                 });
@@ -366,11 +366,11 @@ namespace CustomerPortal.API.Migrations
                         .HasForeignKey("ContractId");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+            modelBuilder.Entity("CustomerPortal.API.Models.User", b =>
                 {
-                    b.HasOne("CustomerPortal.API.Models.User")
-                        .WithMany("Roles")
-                        .HasForeignKey("UserId");
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

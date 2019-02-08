@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using CustomerPortal.API.Context;
 using CustomerPortal.API.Models;
+using CustomerPortal.API.Repos;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -43,7 +44,7 @@ namespace CustomerPortal.API
 
             //# data section
             services.AddTransient<Seed>();
-            //services.AddScoped<IAppRepo, AppRepo>();
+            services.AddScoped<IAppRepo, AppRepo>();
 
             //# identity
             services.AddIdentity<User, IdentityRole>

@@ -1,7 +1,7 @@
 <app-login *ngIf="!isLoggedIn"></app-login>
 
 
-<div class="start-info-container">
+<div class="start-info-container" *ngIf="isLoggedIn">
   <clr-icon shape="tree-view" size="64"></clr-icon>
   <p>Select an item from the left menu to start</p>
 </div>

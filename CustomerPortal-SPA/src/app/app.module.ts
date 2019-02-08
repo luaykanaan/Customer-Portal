@@ -1,11 +1,12 @@
+import { JwtInterceptor } from './_services/jwt-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthService } from './_services/auth.service';
@@ -23,6 +24,8 @@ import { SidenavSupportComponent } from './sidenav-support/sidenav-support.compo
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MainAreaComponent } from './main-area/main-area.component';
 import { AvatarModule } from 'ngx-avatar';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { AdminService } from './_services/admin.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { AvatarModule } from 'ngx-avatar';
     SidenavCustomersComponent,
     SidenavSupportComponent,
     NotFoundComponent,
-    MainAreaComponent
+    MainAreaComponent,
+    AddCustomerComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,10 @@ import { AvatarModule } from 'ngx-avatar';
     ToastrModule.forRoot()
   ],
   providers: [
-    AuthService
+    AuthService,
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    {provide: LOCALE_ID, useValue: 'en-DE' },
+    AdminService
   ],
   bootstrap: [AppComponent]
 })
